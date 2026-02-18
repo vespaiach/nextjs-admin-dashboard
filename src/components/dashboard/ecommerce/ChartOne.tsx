@@ -2,7 +2,6 @@
 
 import type { ApexOptions } from "apexcharts";
 import dynamic from "next/dynamic";
-import type React from "react";
 
 const ReactApexChart = dynamic(() => import("react-apexcharts"), {
   ssr: false,
@@ -116,7 +115,7 @@ const options: ApexOptions = {
   },
 };
 
-const ChartOne: React.FC = () => {
+export default function ChartOne() {
   const series = [
     {
       name: "Total Revenue",
@@ -129,7 +128,7 @@ const ChartOne: React.FC = () => {
   ];
 
   return (
-    <div className="col-span-12 rounded-sm border border-base-300 bg-base-100 px-5 pt-8 pb-5 shadow-sm xl:col-span-8">
+    <div className="dashboard-box col-span-12 px-5 pt-8 pb-5 xl:col-span-8">
       <div className="flex flex-wrap items-start justify-between gap-3 sm:flex-nowrap">
         <div className="flex w-full flex-wrap gap-3 sm:gap-5">
           <div className="flex min-w-48">
@@ -174,16 +173,9 @@ const ChartOne: React.FC = () => {
 
       <div>
         <div id="chartOne" className="-ml-5">
-          <ReactApexChart
-            options={options}
-            series={series}
-            type="area"
-            height={350}
-          />
+          <ReactApexChart options={options} series={series} type="area" height={350} />
         </div>
       </div>
     </div>
   );
-};
-
-export default ChartOne;
+}

@@ -1,5 +1,7 @@
+"use client";
+
 import { Mail, MessageSquare } from "lucide-react";
-import Link from "next/link";
+import MenuItem from "./MenuItem";
 
 export default function SupportGroup() {
   return (
@@ -8,19 +10,13 @@ export default function SupportGroup() {
         SUPPORT
       </h2>
       <ul className="menu menu-md w-full p-0">
-        <li>
-          <Link href="/messages">
-            <MessageSquare size={20} />
-            Messages
-            <span className="badge badge-sm badge-primary">5</span>
-          </Link>
-        </li>
-        <li>
-          <Link href="/inbox">
-            <Mail size={20} />
-            Inbox
-          </Link>
-        </li>
+        <MenuItem
+          href="/messages"
+          label="Messages"
+          icon={<MessageSquare size={20} />}
+          badge={<span className="badge badge-sm badge-primary">5</span>}
+        />
+        <MenuItem href="/inbox" label="Inbox" icon={<Mail size={20} />} />
       </ul>
     </div>
   );

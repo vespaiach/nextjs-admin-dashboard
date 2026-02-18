@@ -49,7 +49,7 @@ const options: ApexOptions = {
   },
 
   xaxis: {
-    categories: ["M", "T", "W", "T", "F", "S", "S"],
+    categories: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
   },
   legend: {
     position: "top",
@@ -67,14 +67,14 @@ const options: ApexOptions = {
   },
 };
 
-export default function ChartTwo() {
+export default function AcquisitionChannels() {
   const series = [
     {
-      name: "Sales",
+      name: "Organic Search",
       data: [44, 55, 41, 67, 22, 43, 65],
     },
     {
-      name: "Revenue",
+      name: "Direct",
       data: [13, 23, 20, 8, 13, 27, 15],
     },
   ];
@@ -83,7 +83,7 @@ export default function ChartTwo() {
     <div className="dashboard-box col-span-12 p-8 xl:col-span-4">
       <div className="mb-4 justify-between gap-4 sm:flex">
         <div>
-          <h4 className="text-xl font-semibold text-base-content">Profit this week</h4>
+          <h4 className="text-xl font-semibold text-base-content">Acquisition Channels</h4>
         </div>
         <div>
           <div className="relative z-20 inline-block">
@@ -96,7 +96,7 @@ export default function ChartTwo() {
       </div>
 
       <div>
-        <div id="chartTwo" className="-ml-5 -mb-9">
+        <div id="acquisitionChannels" className="-ml-5 -mb-9">
           <ReactApexChart options={options} series={series} type="bar" height={350} />
         </div>
       </div>

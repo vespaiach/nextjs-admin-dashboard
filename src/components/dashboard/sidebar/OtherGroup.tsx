@@ -1,5 +1,7 @@
+"use client";
+
 import { Component, Lock, PieChart } from "lucide-react";
-import Link from "next/link";
+import MenuItem from "./MenuItem";
 
 export default function OtherGroup() {
   return (
@@ -15,12 +17,8 @@ export default function OtherGroup() {
               Charts
             </summary>
             <ul>
-              <li>
-                <Link href="/charts/line">Line Chart</Link>
-              </li>
-              <li>
-                <Link href="/charts/bar">Bar Chart</Link>
-              </li>
+              <MenuItem href="/charts/line" label="Line Chart" />
+              <MenuItem href="/charts/bar" label="Bar Chart" />
             </ul>
           </details>
         </li>
@@ -31,24 +29,12 @@ export default function OtherGroup() {
               UI Elements
             </summary>
             <ul className="max-h-60 overflow-y-auto">
-              <li>
-                <Link href="/ui/alerts">Alerts</Link>
-              </li>
-              <li>
-                <Link href="/ui/buttons">Buttons</Link>
-              </li>
-              <li>
-                <Link href="/ui/cards">Cards</Link>
-              </li>
-              <li>
-                <Link href="/ui/modals">Modals</Link>
-              </li>
-              <li>
-                <Link href="/ui/tabs">Tabs</Link>
-              </li>
-              <li>
-                <Link href="/ui/tooltips">Tooltips</Link>
-              </li>
+              <MenuItem href="/ui/alerts" label="Alerts" />
+              <MenuItem href="/ui/buttons" label="Buttons" />
+              <MenuItem href="/ui/cards" label="Cards" />
+              <MenuItem href="/ui/modals" label="Modals" />
+              <MenuItem href="/ui/tabs" label="Tabs" />
+              <MenuItem href="/ui/tooltips" label="Tooltips" />
             </ul>
           </details>
         </li>
@@ -59,12 +45,8 @@ export default function OtherGroup() {
               Authentication
             </summary>
             <ul>
-              <li>
-                <Link href="/auth/signin">Sign In</Link>
-              </li>
-              <li>
-                <Link href="/auth/signup">Sign Up</Link>
-              </li>
+              <MenuItem href="/auth/signin" label="Sign In" />
+              <MenuItem href="/auth/signup" label="Sign Up" />
             </ul>
           </details>
         </li>

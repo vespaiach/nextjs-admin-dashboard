@@ -1,10 +1,4 @@
-import {
-  ChevronDown,
-  Link,
-  LogOut,
-  Settings,
-  User as UserIcon,
-} from "lucide-react";
+import { ChevronDown, Link, LogOut, Settings, User as UserIcon } from "lucide-react";
 import Image from "next/image";
 
 export default function User() {
@@ -12,9 +6,7 @@ export default function User() {
     <div className="dropdown dropdown-end">
       <button type="button" className="flex items-center gap-2 text-left">
         <span className="hidden text-right lg:block">
-          <span className="block text-xs font-semibold">
-            Musharof Chowdhury
-          </span>
+          <span className="block text-xs font-semibold">Musharof Chowdhury</span>
           <span className="block text-xs">Principal Designer</span>
         </span>
 

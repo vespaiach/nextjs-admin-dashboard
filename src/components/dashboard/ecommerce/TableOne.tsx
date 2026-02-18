@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { cn } from "@/utilities/ui";
 
 const brandData = [
   {
@@ -43,54 +44,39 @@ const brandData = [
   },
 ];
 
-const TableOne = () => {
+export default function TableOne() {
   return (
-    <div className="col-span-12 rounded-sm border border-base-300 bg-base-100 px-5 pt-6 pb-2.5 shadow-sm xl:col-span-8">
-      <h4 className="mb-6 text-xl font-semibold text-base-content">
-        Top Channels
-      </h4>
+    <div className="dashboard-box col-span-12 px-5 pt-6 pb-2.5 xl:col-span-8">
+      <h4 className="mb-6 text-xl font-semibold text-base-content">Top Channels</h4>
 
       <div className="flex flex-col">
         <div className="grid grid-cols-3 rounded-sm bg-base-200 sm:grid-cols-5">
           <div className="p-2.5 xl:p-5">
-            <h5 className="text-sm font-medium uppercase sm:text-base">
-              Source
-            </h5>
+            <h5 className="text-sm font-medium uppercase sm:text-base">Source</h5>
           </div>
           <div className="p-2.5 text-center xl:p-5">
-            <h5 className="text-sm font-medium uppercase sm:text-base">
-              Visitors
-            </h5>
+            <h5 className="text-sm font-medium uppercase sm:text-base">Visitors</h5>
           </div>
           <div className="p-2.5 text-center xl:p-5">
-            <h5 className="text-sm font-medium uppercase sm:text-base">
-              Revenues
-            </h5>
+            <h5 className="text-sm font-medium uppercase sm:text-base">Revenues</h5>
           </div>
           <div className="hidden p-2.5 text-center sm:block xl:p-5">
-            <h5 className="text-sm font-medium uppercase sm:text-base">
-              Sales
-            </h5>
+            <h5 className="text-sm font-medium uppercase sm:text-base">Sales</h5>
           </div>
           <div className="hidden p-2.5 text-center sm:block xl:p-5">
-            <h5 className="text-sm font-medium uppercase sm:text-base">
-              Conversion
-            </h5>
+            <h5 className="text-sm font-medium uppercase sm:text-base">Conversion</h5>
           </div>
         </div>
 
-                {brandData.map((brand) => (
-                  <div
-                    className={`grid grid-cols-3 sm:grid-cols-5 ${
-                      brand.name === brandData[brandData.length - 1].name
-                        ? ""
-                        : "border-b border-base-300"
-                    }`}
-                    key={brand.name}
-                  >
-        
+        {brandData.map((brand) => (
+          <div
+            className={cn(
+              "grid grid-cols-3 sm:grid-cols-5",
+              brand.name === brandData[brandData.length - 1].name ? "" : "border-b border-base-300",
+            )}
+            key={brand.name}>
             <div className="flex items-center gap-3 p-2.5 xl:p-5">
-              <div className="flex-shrink-0">
+              <div className="shrink-0">
                 <Image src={brand.logo} alt="Brand" width={48} height={48} />
               </div>
               <p className="hidden text-base-content sm:block">{brand.name}</p>
@@ -116,6 +102,4 @@ const TableOne = () => {
       </div>
     </div>
   );
-};
-
-export default TableOne;
+}

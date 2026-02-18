@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Calendar,
   CheckSquare,
@@ -9,7 +11,7 @@ import {
   User,
   Zap,
 } from "lucide-react";
-import Link from "next/link";
+import MenuItem from "./MenuItem";
 
 export default function MenuGroup() {
   return (
@@ -25,26 +27,12 @@ export default function MenuGroup() {
               Dashboard
             </summary>
             <ul>
-              <li>
-                <Link href="/ecommerce" className="active">
-                  eCommerce
-                </Link>
-              </li>
-              <li>
-                <Link href="/analytics">Analytics</Link>
-              </li>
-              <li>
-                <Link href="/marketing">Marketing</Link>
-              </li>
-              <li>
-                <Link href="/crm">CRM</Link>
-              </li>
-              <li>
-                <Link href="/stocks">Stocks</Link>
-              </li>
-              <li>
-                <Link href="/saas">SaaS</Link>
-              </li>
+              <MenuItem href="/dashboard/ecommerce" label="eCommerce" />
+              <MenuItem href="/dashboard/analytics" label="Analytics" />
+              <MenuItem href="/dashboard/marketing" label="Marketing" />
+              <MenuItem href="/dashboard/crm" label="CRM" />
+              <MenuItem href="/dashboard/stocks" label="Stocks" />
+              <MenuItem href="/dashboard/saas" label="SaaS" />
             </ul>
           </details>
         </li>
@@ -56,12 +44,8 @@ export default function MenuGroup() {
               <span className="badge badge-xs badge-secondary">New</span>
             </summary>
             <ul>
-              <li>
-                <Link href="/ai/text">Text Generator</Link>
-              </li>
-              <li>
-                <Link href="/ai/image">Image Generator</Link>
-              </li>
+              <MenuItem href="/ai/text" label="Text Generator" />
+              <MenuItem href="/ai/image" label="Image Generator" />
             </ul>
           </details>
         </li>
@@ -73,27 +57,13 @@ export default function MenuGroup() {
               <span className="badge badge-xs badge-secondary">New</span>
             </summary>
             <ul>
-              <li>
-                <Link href="/ecommerce/products">Products</Link>
-              </li>
-              <li>
-                <Link href="/ecommerce/billing">Billing</Link>
-              </li>
+              <MenuItem href="/ecommerce/products" label="Products" />
+              <MenuItem href="/ecommerce/billing" label="Billing" />
             </ul>
           </details>
         </li>
-        <li>
-          <Link href="/calendar">
-            <Calendar size={20} />
-            Calendar
-          </Link>
-        </li>
-        <li>
-          <Link href="/profile">
-            <User size={20} />
-            Profile
-          </Link>
-        </li>
+        <MenuItem href="/calendar" label="Calendar" icon={<Calendar size={20} />} />
+        <MenuItem href="/profile" label="Profile" icon={<User size={20} />} />
         <li>
           <details>
             <summary>
@@ -101,12 +71,8 @@ export default function MenuGroup() {
               Task
             </summary>
             <ul>
-              <li>
-                <Link href="/tasks/list">List</Link>
-              </li>
-              <li>
-                <Link href="/tasks/kanban">Kanban</Link>
-              </li>
+              <MenuItem href="/tasks/list" label="List" />
+              <MenuItem href="/tasks/kanban" label="Kanban" />
             </ul>
           </details>
         </li>
@@ -117,12 +83,8 @@ export default function MenuGroup() {
               Forms
             </summary>
             <ul>
-              <li>
-                <Link href="/forms/elements">Form Elements</Link>
-              </li>
-              <li>
-                <Link href="/forms/layout">Form Layout</Link>
-              </li>
+              <MenuItem href="/forms/elements" label="Form Elements" />
+              <MenuItem href="/forms/layout" label="Form Layout" />
             </ul>
           </details>
         </li>
@@ -133,12 +95,8 @@ export default function MenuGroup() {
               Tables
             </summary>
             <ul>
-              <li>
-                <Link href="/tables/basic">Basic Tables</Link>
-              </li>
-              <li>
-                <Link href="/tables/data">Data Tables</Link>
-              </li>
+              <MenuItem href="/tables/basic" label="Basic Tables" />
+              <MenuItem href="/tables/data" label="Data Tables" />
             </ul>
           </details>
         </li>
@@ -149,21 +107,11 @@ export default function MenuGroup() {
               Pages
             </summary>
             <ul>
-              <li>
-                <Link href="/pages/settings">Settings</Link>
-              </li>
-              <li>
-                <Link href="/pages/file-manager">File Manager</Link>
-              </li>
-              <li>
-                <Link href="/pages/pricing">Pricing Tables</Link>
-              </li>
-              <li>
-                <Link href="/pages/faq">FAQ</Link>
-              </li>
-              <li>
-                <Link href="/pages/blank">Blank Page</Link>
-              </li>
+              <MenuItem href="/pages/settings" label="Settings" />
+              <MenuItem href="/pages/file-manager" label="File Manager" />
+              <MenuItem href="/pages/pricing" label="Pricing Tables" />
+              <MenuItem href="/pages/faq" label="FAQ" />
+              <MenuItem href="/pages/blank" label="Blank Page" />
             </ul>
           </details>
         </li>

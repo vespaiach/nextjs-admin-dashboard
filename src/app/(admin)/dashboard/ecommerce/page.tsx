@@ -1,11 +1,10 @@
-import type React from "react";
 import ChartOne from "@/components/dashboard/ecommerce/ChartOne";
 import ChartTwo from "@/components/dashboard/ecommerce/ChartTwo";
 import ChatCard from "@/components/dashboard/ecommerce/ChatCard";
 import StatCards from "@/components/dashboard/ecommerce/StatCards";
 import TableOne from "@/components/dashboard/ecommerce/TableOne";
 
-const EcommercePage: React.FC = () => {
+export default function EcommercePage() {
   return (
     <div className="mx-auto max-w-360 p-4 md:p-6 2xl:p-10">
       <StatCards />
@@ -18,6 +17,4 @@ const EcommercePage: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default EcommercePage;
+}

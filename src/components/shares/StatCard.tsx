@@ -19,13 +19,11 @@ export default function StatCard({
   levelUp,
   levelDown,
   children,
-  className
+  className,
 }: StatCardProps) {
   return (
     <div className={cn("dashboard-box", className)}>
-      <div>
-        {children}
-      </div>
+      <div>{children}</div>
 
       <div className="mt-4 flex items-end justify-between">
         <div>

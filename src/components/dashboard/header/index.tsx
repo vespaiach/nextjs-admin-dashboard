@@ -11,9 +11,7 @@ export default function Header() {
     <header className="navbar sticky top-0 z-30 flex w-full bg-base-100 border-b border-base-300 transition-all duration-300">
       <div className="flex grow items-center justify-between px-4 md:px-2 2xl:px-11">
         <div className="flex items-center gap-2 sm:gap-4 lg:hidden">
-          <label
-            htmlFor="sidebar-toggler"
-            className="btn btn-ghost btn-sm btn-square lg:hidden">
+          <label htmlFor="sidebar-toggler" className="btn btn-ghost btn-sm btn-square lg:hidden">
             <Menu size={20} />
           </label>
           <Link className="block shrink-0 lg:hidden" href="/">
