@@ -9,7 +9,7 @@ export default function DashboardLayout({
   return (
     <div className="drawer md:drawer-open">
       <input id="sidebar-toggler" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content flex flex-col">
+      <div className="drawer-content flex flex-col bg-base-200">
         <Header />
         <main className="flex-1 p-4 px-1">{children}</main>
       </div>

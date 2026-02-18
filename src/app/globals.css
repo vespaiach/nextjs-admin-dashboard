@@ -1,2 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+@utility dashboard-box {
+  @apply rounded-lg border border-base-300 bg-base-100 p-6;
+}

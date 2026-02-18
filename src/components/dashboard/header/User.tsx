@@ -1,4 +1,10 @@
-import { ChevronDown, Link, LogOut, Settings, User as UserIcon } from "lucide-react";
+import {
+  ChevronDown,
+  Link,
+  LogOut,
+  Settings,
+  User as UserIcon,
+} from "lucide-react";
 import Image from "next/image";
 
 export default function User() {
@@ -26,7 +32,7 @@ export default function User() {
         <ChevronDown size={20} className="hidden sm:block" />
       </button>
 
-      <ul className="dropdown-content menu z-[1] mt-4 w-62 rounded-sm border border-base-200 bg-base-100 p-2 shadow-lg">
+      <ul className="dropdown-content menu z-1 mt-4 w-62 rounded-sm border border-base-200 bg-base-100 p-2 shadow-lg">
         <li>
           <Link
             href="/profile"
