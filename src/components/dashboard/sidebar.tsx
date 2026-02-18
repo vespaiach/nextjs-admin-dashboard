@@ -19,19 +19,18 @@ import Link from "next/link";
 export default function Sidebar() {
   return (
     <div className="py-4 px-4 w-70 md:w-72 min-h-full bg-base-100 text-base-content border-r border-base-200 overflow-y-auto">
-      <div className="mb-6 px-4">
+      <div className="mb-6">
         <Link href="/" className="flex items-center gap-2 font-bold text-2xl">
           <div className="bg-primary text-primary-content p-1 rounded-lg">
             <Zap size={24} fill="currentColor" />
           </div>
-          <span>TailAdmin</span>
+          <span>Admin</span>
         </Link>
       </div>
 
-      <nav>
-        {/* MENU Group */}
-        <div className="mb-4">
-          <h2 className="px-4 mb-2 text-xs font-semibold tracking-widest text-base-content/50 uppercase">
+      <nav className="flex flex-col gap-5">
+        <div>
+          <h2 className="mb-2 text-xs font-semibold tracking-widest text-base-content/50 uppercase">
             MENU
           </h2>
           <ul className="menu menu-md w-full p-0">
@@ -188,8 +187,8 @@ export default function Sidebar() {
         </div>
 
         {/* SUPPORT Group */}
-        <div className="mb-4">
-          <h2 className="px-4 mb-2 text-xs font-semibold tracking-widest text-base-content/50 uppercase">
+        <div>
+          <h2 className="mb-2 text-xs font-semibold tracking-widest text-base-content/50 uppercase">
             SUPPORT
           </h2>
           <ul className="menu menu-md w-full p-0">
@@ -210,8 +209,8 @@ export default function Sidebar() {
         </div>
 
         {/* OTHERS Group */}
-        <div className="mb-4">
-          <h2 className="px-4 mb-2 text-xs font-semibold tracking-widest text-base-content/50 uppercase">
+        <div>
+          <h2 className="mb-2 text-xs font-semibold tracking-widest text-base-content/50 uppercase">
             OTHERS
           </h2>
           <ul className="menu menu-md w-full p-0">
